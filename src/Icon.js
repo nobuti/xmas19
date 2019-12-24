@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import * as Icons from './icons'
+import * as Icons from "./icons";
 
 const Icon = ({ name, ...rest }) => {
-  const Svg = Icons[name]
+  const Svg = Icons[name];
   if (!Svg) {
-    console.error(`${name} doesn't exist in the ICON namespace`)
-    return null
+    console.error(`${name} doesn't exist in the ICON namespace`);
+    return null;
   }
 
-  return <Svg {...rest} />
-}
+  return <Svg {...rest} />;
+};
 
-export default Icon
+export default Icon;
