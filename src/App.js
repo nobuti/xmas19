@@ -47,7 +47,7 @@ const IconPosed = posed.div({
 
 const App = () => {
   useEffect(() => {
-    new Audio('/audio.mp3').play()
+    new Audio('./audio.mp3').play()
   }, [])
 
   const [icon, setIcon] = useState(0)
