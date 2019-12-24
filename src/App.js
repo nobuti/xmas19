@@ -23,6 +23,16 @@ const Column = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  & + & {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: 800px) {
+    & + & {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 const H1 = styled.h1`
@@ -42,7 +52,12 @@ const Container = styled.div`
   flex: 1;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
+  flex-direction: column-reverse;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 const Button = styled.button`
